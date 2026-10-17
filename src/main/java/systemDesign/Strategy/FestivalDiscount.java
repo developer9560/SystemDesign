@@ -1,0 +1,13 @@
+package systemDesign.Strategy;
+
+import java.math.BigDecimal;
+
+public class FestivalDiscount implements DiscountStrategy{
+
+    public static final BigDecimal Rate = new BigDecimal("0.20");
+
+    @Override
+    public BigDecimal calculateDiscount(BigDecimal amount){
+        return amount.multiply(Rate);
+    }
+}
